@@ -11,7 +11,7 @@ or
 at solution folder run `npm i`
 
 ### Run the project
-Run `start.bat` to start the server at port `http://localhost:8080/` and angular project at port `http://localhost:4200/`
+Run `start.bat` to start the server at `http://localhost:8080/` and angular project at `http://localhost:4200/`
 or
 run `java -jar backend/server.jar` and at solution folder run `ng serve` 
 
