@@ -1,0 +1,20 @@
+<table class="table table-striped">
+  <thead class="thead">
+    <tr>
+      <th scope="col">Date/time</th>
+      <th scope="col">Value 1</th>
+      <th scope="col">Value 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of info; let i = index">
+      <td>{{data.timestamp| date:"MM/dd/yyyy. hh:MM"}} 
+        <span *ngIf="loading == true && index == i" class="spin">
+          <div class="fa fa-spinner fa-spin"></div>
+        </span>
+      </td>
+      <td contenteditable="true" [(appEditableDiv)]="data.value1" (keyup)="refresh(data, i)">{{data.value1}}</td>
+      <td contenteditable="true" [(appEditableDiv)]="data.value2" (keyup)="refresh(data, i)">{{data.value2}}</td>
+    </tr>
+  </tbody>
+</table>

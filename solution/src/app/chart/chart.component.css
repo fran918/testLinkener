@@ -1,0 +1,11 @@
+.select{
+    width: 200px;
+    position: absolute;
+    z-index: 1000;
+    right: 40px;}
+.row1{
+    margin: 5px 20px;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    background: white;
+}

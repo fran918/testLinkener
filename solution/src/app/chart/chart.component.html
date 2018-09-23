@@ -1,0 +1,16 @@
+<div class="row1">
+    <div class="select">
+        <select class="form-control" (ngModelChange)="modelChanged($event)" [(ngModel)]="brandTime" id="time">
+            <option [value]="defaultTime.label" selected="selected">
+                {{defaultTime.label}}
+            </option>
+            <option *ngFor="let time of timeChoices.slice(1)" [value]="time.value">
+                {{time.label}}
+            </option>
+        </select>
+    </div>
+    <div [chart]="chart" (load)="saveInstance($event.context)"></div>
+</div>
+<div class="row1">
+    <app-table [info]="info" (valueChange)="displayChanges($event)"></app-table>
+</div>
